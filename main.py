@@ -2,7 +2,7 @@ import streamlit as st
 
 # Sidebar for researcher navigation and info
 with st.sidebar:
-    st.image("sara_de_la_salle.jpg", width=200)  # Replace with Sara's image
+    #st.image("sara_de_la_salle.jpg", width=200)  # Replace with Sara's image
     st.title("Researcher Profile")
     st.markdown("Welcome to my professional profile. Explore my research, publications, and ongoing projects.")
     st.markdown("### Contact Information")
