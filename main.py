@@ -1,163 +1,81 @@
 import streamlit as st
 
-# Custom CSS for earthy theme and sidebar
-st.markdown("""
+# Set the page config
+st.set_page_config(page_title="Researcher Landing Page", layout="wide")
+
+# Set the custom CSS for earthy color palette
+st.markdown(
+    """
     <style>
-        body {
-            background: linear-gradient(to bottom, #d4e2c7, #3e4e55);
-            font-family: 'Helvetica', sans-serif;
-            color: #333;
+        .stApp {
+            background-color: #f0f5f1;  # Light earthy background
         }
-
-        .sidebar .sidebar-content {
-            background-color: #f0f4f1;
-            color: #555;
+        .title {
+            color: #4b3c31;  # Dark brown title text
         }
-
-        .sidebar .sidebar-header {
-            font-size: 2rem;
-            color: #2f3a34;
-            font-weight: bold;
+        .header {
+            color: #5a4e39;  # Medium brown
         }
-
-        h1, h2, h3 {
-            font-family: 'Georgia', serif;
-            color: #2f3a34;
+        .subheader {
+            color: #6d7b4d;  # Olive green subheader text
         }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 600;
-        }
-
-        p, li {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #4b5c44;
-        }
-
-        .stButton button {
-            background-color: #8c8c7a;
-            color: #fff;
-            font-size: 1.2rem;
-            border-radius: 10px;
-            border: none;
-            padding: 10px 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        .stButton button:hover {
-            background-color: #a4bfa3;
-        }
-
-        .section-title {
-            color: #4b5c44;
-            font-size: 2.2rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .section-content {
+        .section {
+            background-color: #e4e9e2;  # Light greenish beige for sections
             padding: 20px;
-            background-color: #e2e8d3;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-form input, .contact-form textarea {
-            background-color: #f5f5f2;
-            color: #333;
-            border: 1px solid #a4bfa3;
-            padding: 12px;
-            border-radius: 8px;
-            width: 100%;
-            margin-bottom: 12px;
-        }
-
-        .contact-form button {
-            background-color: #4b5c44;
-            color: #fff;
-            border: none;
             border-radius: 10px;
-            padding: 12px 20px;
-            font-size: 1.5rem;
-            cursor: pointer;
         }
-
-        .contact-form button:hover {
-            background-color: #8c8c7a;
+        .button {
+            background-color: #7b6d4e;  # Earthy brown button
+            color: white;
+            border-radius: 5px;
         }
     </style>
+    """, unsafe_allow_html=True
+)
+
+# Title and introductory section
+st.markdown('<h1 class="title">Dr. Sara de la Salle - Researcher</h1>', unsafe_allow_html=True)
+st.markdown('<p class="header">Welcome to the landing page of Dr. Sara de la Salle, a passionate scientist focused on environmental sustainability and climate change.</p>', unsafe_allow_html=True)
+
+# Research Interests Section
+st.markdown('<h2 class="subheader">Research Interests</h2>', unsafe_allow_html=True)
+st.markdown("""
+<div class="section">
+    <ul>
+        <li>Climate Change Impact on Biodiversity</li>
+        <li>Sustainable Agricultural Practices</li>
+        <li>Environmental Policy and Global Climate Initiatives</li>
+    </ul>
+</div>
 """, unsafe_allow_html=True)
 
-# Sidebar configuration
-st.sidebar.title("Navigation")
-st.sidebar.markdown("""
-- [Home](#home)
-- [About Me](#about-me)
-- [Research](#research)
-- [Publications](#publications)
-- [Contact](#contact)
-""")
-
-# Home Section
-st.title("Sara de la Salle - Researcher Portfolio")
-
-st.header("Welcome to My Research Portfolio!")
-st.write("""
-    Hello, I am Sara de la Salle, a researcher specializing in neuropsychology and psychiatry. 
-    My work focuses on the neural mechanisms of psychiatric disorders, with a particular interest in sensory processing, depression, and the effects of psychedelics.
-    Feel free to browse through my work, publications, and get in touch if you'd like to collaborate.
-""")
-
-# About Me Section
-st.header("About Me")
-st.write("""
-    I am currently a researcher at [Institution or University Name], specializing in the neural basis of psychiatric disorders. 
-    My research interests include [Research Focus 1], [Research Focus 2], and the effects of various pharmacological interventions on mental health.
-    I am deeply involved in clinical studies and research exploring treatments for mood disorders, including depression and anxiety.
-""")
-
-# Research Section
-st.header("Research")
-st.write("""
-    Here are some of my recent projects and publications:
-""")
-
-# Example Research/Publication 1
-st.subheader("Acute subanesthetic ketamine-induced effects on the mismatch negativity and their relationship to early and sustained treatment response in major depressive disorder")
-st.write("""
-    **Published**: Feb 2025  
-    **Co-authors**: Jennifer L Phillips, Pierre Blier, Verner Knott  
-    This study examines the effects of sub-anesthetic doses of ketamine on mismatch negativity (MMN), a neural marker, in patients with major depressive disorder.
-    [View Article](#)
-""")
+# Publications Section
+st.markdown('<h2 class="subheader">Key Publications</h2>', unsafe_allow_html=True)
+st.markdown("""
+<div class="section">
+    <ul>
+        <li><a href="https://example.com/publication1" target="_blank">"The Role of Forests in Carbon Sequestration"</a></li>
+        <li><a href="https://example.com/publication2" target="_blank">"Sustainable Water Management Practices in Agriculture"</a></li>
+        <li><a href="https://example.com/publication3" target="_blank">"Innovations in Green Technology for the 21st Century"</a></li>
+    </ul>
+</div>
+""", unsafe_allow_html=True)
 
 # Contact Section
-st.header("Contact Me")
-st.write("""
-    You can reach me at:
-    - Email: [email@example.com]
-    - LinkedIn: [LinkedIn Profile Link]
-    - ResearchGate: [ResearchGate Profile Link]
-""")
-
-# Contact Form
-st.header("Contact Form")
-contact_form = """
-<div class="contact-form">
-    <form action="https://formsubmit.co/your-email@example.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+st.markdown('<h2 class="subheader">Contact</h2>', unsafe_allow_html=True)
+st.markdown("""
+<div class="section">
+    <p>Interested in collaborating or learning more about my research? Feel free to reach out:</p>
+    <a href="mailto:sara.delasalle@example.com" class="button">Email Dr. Sara de la Salle</a>
 </div>
-"""
-st.markdown(contact_form, unsafe_allow_html=True)
+""", unsafe_allow_html=True)
+
+# Footer with social links
+st.markdown('<h3 class="subheader">Follow Me</h3>', unsafe_allow_html=True)
+st.markdown("""
+<div class="section">
+    <a href="https://twitter.com/saradelasalle" target="_blank">Twitter</a> | 
+    <a href="https://github.com/saradelasalle" target="_blank">GitHub</a> | 
+    <a href="https://www.linkedin.com/in/saradelasalle" target="_blank">LinkedIn</a>
+</div>
+""", unsafe_allow_html=True)
