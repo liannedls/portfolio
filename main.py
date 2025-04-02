@@ -1,81 +1,95 @@
 import streamlit as st
 
-# Set the page config
-st.set_page_config(page_title="Researcher Landing Page", layout="wide")
+# Setting up the page config
+st.set_page_config(page_title="Researcher Portfolio", page_icon="📚", layout="wide")
 
-# Set the custom CSS for earthy color palette
-st.markdown(
-    """
+# Define custom styles
+st.markdown("""
     <style>
-        .stApp {
-            background-color: #f0f5f1;  # Light earthy background
-        }
-        .title {
-            color: #4b3c31;  # Dark brown title text
+        body {
+            background-color: #f4f1e1;  /* Soft earthy background */
+            font-family: "Arial", sans-serif;
         }
         .header {
-            color: #5a4e39;  # Medium brown
+            color: #3d4c43;  /* Deep earthy green */
+            font-size: 2.5em;
+            font-weight: bold;
         }
         .subheader {
-            color: #6d7b4d;  # Olive green subheader text
+            color: #5a7462;  /* Lighter earthy green */
+            font-size: 1.5em;
+            margin-top: 20px;
         }
-        .section {
-            background-color: #e4e9e2;  # Light greenish beige for sections
-            padding: 20px;
+        .content {
+            color: #3d4c43;  /* Deep earthy green */
+            line-height: 1.8;
+        }
+        .footer {
+            color: #8e9a7d;  /* Light earthy green */
+            font-size: 1em;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .card {
+            background-color: #e7f1e7; /* Light green card background */
             border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
         }
-        .button {
-            background-color: #7b6d4e;  # Earthy brown button
-            color: white;
-            border-radius: 5px;
+        .card-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #3d4c43;
+        }
+        .card-description {
+            color: #5a7462;
         }
     </style>
-    """, unsafe_allow_html=True
-)
-
-# Title and introductory section
-st.markdown('<h1 class="title">Dr. Sara de la Salle - Researcher</h1>', unsafe_allow_html=True)
-st.markdown('<p class="header">Welcome to the landing page of Dr. Sara de la Salle, a passionate scientist focused on environmental sustainability and climate change.</p>', unsafe_allow_html=True)
-
-# Research Interests Section
-st.markdown('<h2 class="subheader">Research Interests</h2>', unsafe_allow_html=True)
-st.markdown("""
-<div class="section">
-    <ul>
-        <li>Climate Change Impact on Biodiversity</li>
-        <li>Sustainable Agricultural Practices</li>
-        <li>Environmental Policy and Global Climate Initiatives</li>
-    </ul>
-</div>
 """, unsafe_allow_html=True)
 
-# Publications Section
-st.markdown('<h2 class="subheader">Key Publications</h2>', unsafe_allow_html=True)
+# Main content
+
+# Header section
+st.markdown('<p class="header">Welcome to My Research Portfolio</p>', unsafe_allow_html=True)
+st.write("Hello, I'm [Your Name], a passionate researcher in [Your Field of Research]. Explore my work and learn more about my ongoing projects and publications.")
+
+# About me section
+st.markdown('<p class="subheader">About Me</p>', unsafe_allow_html=True)
 st.markdown("""
-<div class="section">
-    <ul>
-        <li><a href="https://example.com/publication1" target="_blank">"The Role of Forests in Carbon Sequestration"</a></li>
-        <li><a href="https://example.com/publication2" target="_blank">"Sustainable Water Management Practices in Agriculture"</a></li>
-        <li><a href="https://example.com/publication3" target="_blank">"Innovations in Green Technology for the 21st Century"</a></li>
-    </ul>
-</div>
+    <div class="content">
+        <p>I am a researcher focused on [Your Research Focus]. With years of experience in [mention expertise areas],
+        I work on [briefly describe your research contributions, methodologies, or goals].</p>
+    </div>
 """, unsafe_allow_html=True)
 
-# Contact Section
-st.markdown('<h2 class="subheader">Contact</h2>', unsafe_allow_html=True)
+# Research Projects section
+st.markdown('<p class="subheader">Research Projects</p>', unsafe_allow_html=True)
+# Example research project 1
+with st.expander("Project 1: Title of Your Research Project"):
+    st.markdown("""
+        <div class="card">
+            <p class="card-title">Project Title</p>
+            <p class="card-description">Brief description of your research project. This can include methodology, findings, and outcomes. You can also link to your papers or project pages here.</p>
+        </div>
+    """, unsafe_allow_html=True)
+    
+# Example research project 2
+with st.expander("Project 2: Another Research Project"):
+    st.markdown("""
+        <div class="card">
+            <p class="card-title">Project Title</p>
+            <p class="card-description">Brief description of another research project. Include any important results or applications. You can also provide links or visuals for the project here.</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+# Contact section
+st.markdown('<p class="subheader">Contact</p>', unsafe_allow_html=True)
 st.markdown("""
-<div class="section">
-    <p>Interested in collaborating or learning more about my research? Feel free to reach out:</p>
-    <a href="mailto:sara.delasalle@example.com" class="button">Email Dr. Sara de la Salle</a>
-</div>
+    <div class="content">
+        <p>Feel free to reach out to me via email at: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    </div>
 """, unsafe_allow_html=True)
 
-# Footer with social links
-st.markdown('<h3 class="subheader">Follow Me</h3>', unsafe_allow_html=True)
-st.markdown("""
-<div class="section">
-    <a href="https://twitter.com/saradelasalle" target="_blank">Twitter</a> | 
-    <a href="https://github.com/saradelasalle" target="_blank">GitHub</a> | 
-    <a href="https://www.linkedin.com/in/saradelasalle" target="_blank">LinkedIn</a>
-</div>
-""", unsafe_allow_html=True)
+# Footer
+st.markdown('<p class="footer">Made with ❤️ using Streamlit</p>', unsafe_allow_html=True)
+
