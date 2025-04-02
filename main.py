@@ -1,40 +1,50 @@
 import streamlit as st
 
-# Add custom CSS for psychedelic theme
+# Custom CSS for earthy theme and sidebar
 st.markdown("""
     <style>
         body {
-            background: radial-gradient(circle, rgba(255, 105, 180, 0.7), rgba(0, 255, 255, 0.7));
-            font-family: 'Courier New', Courier, monospace;
-            color: #fff;
-        }
-        
-        h1, h2, h3 {
-            font-family: 'Arial', sans-serif;
-            color: #ff1493;
-            text-align: center;
-        }
-        
-        h1 {
-            font-size: 3.5rem;
-            color: #00ffff;
-            text-shadow: 2px 2px 8px rgba(0, 255, 255, 0.7);
+            background: linear-gradient(to bottom, #d4e2c7, #3e4e55);
+            font-family: 'Helvetica', sans-serif;
+            color: #333;
         }
 
-        h2, h3 {
+        .sidebar .sidebar-content {
+            background-color: #f0f4f1;
+            color: #555;
+        }
+
+        .sidebar .sidebar-header {
+            font-size: 2rem;
+            color: #2f3a34;
+            font-weight: bold;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+            color: #2f3a34;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        h2 {
             font-size: 2.5rem;
-            text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.8);
+            font-weight: 600;
         }
 
         p, li {
             font-size: 1.2rem;
             line-height: 1.8;
+            color: #4b5c44;
         }
 
         .stButton button {
-            background-color: #ff1493;
+            background-color: #8c8c7a;
             color: #fff;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             border-radius: 10px;
             border: none;
             padding: 10px 20px;
@@ -42,36 +52,36 @@ st.markdown("""
         }
 
         .stButton button:hover {
-            background-color: #00ffff;
+            background-color: #a4bfa3;
         }
 
         .section-title {
-            color: #ff6347;
-            text-shadow: 2px 2px 6px rgba(255, 69, 0, 0.9);
-            font-size: 2.5rem;
-            text-align: center;
+            color: #4b5c44;
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
         .section-content {
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
+            background-color: #e2e8d3;
+            border-radius: 8px;
             margin-bottom: 20px;
-            box-shadow: 0px 4px 12px rgba(255, 105, 180, 0.7);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .contact-form input, .contact-form textarea {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            border: 1px solid #ff6347;
-            padding: 10px;
-            border-radius: 10px;
+            background-color: #f5f5f2;
+            color: #333;
+            border: 1px solid #a4bfa3;
+            padding: 12px;
+            border-radius: 8px;
             width: 100%;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .contact-form button {
-            background-color: #00ffff;
+            background-color: #4b5c44;
             color: #fff;
             border: none;
             border-radius: 10px;
@@ -81,15 +91,24 @@ st.markdown("""
         }
 
         .contact-form button:hover {
-            background-color: #ff1493;
+            background-color: #8c8c7a;
         }
     </style>
 """, unsafe_allow_html=True)
 
-# Title of the webpage
-st.title("Sara de la Salle - Researcher Portfolio")
+# Sidebar configuration
+st.sidebar.title("Navigation")
+st.sidebar.markdown("""
+- [Home](#home)
+- [About Me](#about-me)
+- [Research](#research)
+- [Publications](#publications)
+- [Contact](#contact)
+""")
 
 # Home Section
+st.title("Sara de la Salle - Researcher Portfolio")
+
 st.header("Welcome to My Research Portfolio!")
 st.write("""
     Hello, I am Sara de la Salle, a researcher specializing in neuropsychology and psychiatry. 
