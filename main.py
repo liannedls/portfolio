@@ -1,5 +1,91 @@
 import streamlit as st
 
+# Add custom CSS for psychedelic theme
+st.markdown("""
+    <style>
+        body {
+            background: radial-gradient(circle, rgba(255, 105, 180, 0.7), rgba(0, 255, 255, 0.7));
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Arial', sans-serif;
+            color: #ff1493;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            color: #00ffff;
+            text-shadow: 2px 2px 8px rgba(0, 255, 255, 0.7);
+        }
+
+        h2, h3 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.8);
+        }
+
+        p, li {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .stButton button {
+            background-color: #ff1493;
+            color: #fff;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            border: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .stButton button:hover {
+            background-color: #00ffff;
+        }
+
+        .section-title {
+            color: #ff6347;
+            text-shadow: 2px 2px 6px rgba(255, 69, 0, 0.9);
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        .section-content {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 12px rgba(255, 105, 180, 0.7);
+        }
+
+        .contact-form input, .contact-form textarea {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid #ff6347;
+            padding: 10px;
+            border-radius: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .contact-form button {
+            background-color: #00ffff;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # Title of the webpage
 st.title("Sara de la Salle - Researcher Portfolio")
 
@@ -34,96 +120,6 @@ st.write("""
     [View Article](#)
 """)
 
-# Example Research/Publication 2
-st.subheader("Ontario healthcare workers who sought treatment for their mental health during the first five waves of the COVID-19 pandemic")
-st.write("""
-    **Published**: Feb 2025  
-    **Co-authors**: Judith M Laposa, Duncan Cameron, Kim Corace, Randi E McCabe  
-    This paper explores the demographic profile of healthcare workers who self-referred for mental health treatment during the COVID-19 pandemic in Ontario.
-    [View Article](#)
-""")
-
-# Example Research/Publication 3
-st.subheader("The ketamine chameleon: history, pharmacology, and the contested value of experience")
-st.write("""
-    **Published**: Jan 2025  
-    **Co-authors**: Danny Diep, Julien Thibault Lévesque, Kyle Greenway  
-    This review discusses the history and pharmacology of ketamine, as well as its subjective effects in medical and recreational contexts.
-    [View Article](#)
-""")
-
-# Example Research/Publication 4
-st.subheader("Electrocortical Profiles in Relation to Childhood Adversity and Depression Severity: A Preliminary Report")
-st.write("""
-    **Published**: Nov 2024  
-    **Co-authors**: Natalia Jaworska, Bronwen Schryver, Verner Knott  
-    This study investigates the relationship between electroencephalographic (EEG) activity, childhood adversity, and depression severity.
-    [View Article](#)
-""")
-
-# Example Research/Publication 5
-st.subheader("Longitudinal experiences of Canadians receiving compassionate access to psilocybin-assisted psychotherapy")
-st.write("""
-    **Published**: Jul 2024  
-    **Co-authors**: Hannes Kettner, Julien Thibault Lévesque, Kyle Greenway  
-    This research examines the long-term effects of psilocybin-assisted psychotherapy in Canadians receiving compassionate access to the treatment.
-    [View Article](#)
-""")
-
-# Additional Publications Section
-
-# Additional Research/Publication 6
-st.subheader("Acute and Enduring Effects of Naturalistic Psychedelic Use Among Indigenous Peoples in Canada and the United States")
-st.write("""
-    **Published**: Aug 2022  
-    **Co-authors**: Sophia Gran-Ruaz, Dawn D Davis, Monnica T Williams  
-    This study explores the effects of naturalistic psychedelic use among Indigenous peoples in Canada and the U.S., focusing on racial trauma and healing.
-    [View Article](#)
-""")
-
-# Additional Research/Publication 7
-st.subheader("N-methyl-D-aspartate receptor antagonism impairs sensory gating in the auditory cortex in response to speech stimuli")
-st.write("""
-    **Published**: Jul 2022  
-    **Co-authors**: Joelle Choueiry, Judy McIntosh, Verner Knott  
-    This study investigates how NMDAR antagonism impacts sensory gating in response to auditory stimuli in healthy individuals.
-    [View Article](#)
-""")
-
-# Additional Research/Publication 8
-st.subheader("Ethnoracial Inclusion in Clinical Trials of Ketamine in the Treatment of Mental Health Disorders")
-st.write("""
-    **Published**: Jul 2022  
-    **Co-authors**: Timothy Michaels, Lebert Lester, Monnica T Williams  
-    This paper explores the racial disparities in ketamine clinical trials and the importance of ethnoracial inclusion in mental health research.
-    [View Article](#)
-""")
-
-# Additional Research/Publication 9
-st.subheader("Synchronized Auditory Gamma Response to Frontal Transcranial Direct Current Stimulation (tDCS) and its Inter-Individual Variation in Healthy Humans")
-st.write("""
-    **Published**: May 2022  
-    **Co-authors**: Urusa Shah, Molly Hyde, Verner Knott  
-    This study examines the effects of frontal tDCS on the auditory gamma response and its variability across individuals.
-    [View Article](#)
-""")
-
-# Additional Research/Publication 10
-st.subheader("Transcranial Alternating Current Stimulation (Tacs) Alters Auditory Steady-State Oscillatory Rhythms and Their Cross-Frequency Couplings")
-st.write("""
-    **Published**: Jan 2022  
-    **Co-authors**: Joelle Choueiry, Mark Payumo, Verner Knott  
-    This article investigates how TACS alters auditory steady-state oscillations, focusing on their cross-frequency couplings.
-    [View Article](#)
-""")
-
-# CV Section
-st.header("Curriculum Vitae (CV)")
-st.write("""
-    You can view or download my CV using the link below:
-""")
-st.markdown("[Download CV](#)")
-
 # Contact Section
 st.header("Contact Me")
 st.write("""
@@ -133,14 +129,16 @@ st.write("""
     - ResearchGate: [ResearchGate Profile Link]
 """)
 
-# Optional: If you want a contact form
+# Contact Form
 st.header("Contact Form")
 contact_form = """
-<form action="https://formsubmit.co/your-email@example.com" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send Message</button>
-</form>
+<div class="contact-form">
+    <form action="https://formsubmit.co/your-email@example.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+</div>
 """
 st.markdown(contact_form, unsafe_allow_html=True)
